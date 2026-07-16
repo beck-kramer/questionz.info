@@ -2,51 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>No Internet Connection</title>
+    <title>Questionz Search</title>
     <style>
         body {
-            background: #f2f2f2;
             font-family: Arial, sans-serif;
-            color: #555;
+            background: #ffffff;
+            margin: 0;
+            padding: 0;
             text-align: center;
-            padding-top: 10%;
         }
+
+        .container {
+            margin-top: 12%;
+        }
+
         img {
-            width: 180px;
+            width: 260px; /* adjust if needed */
             margin-bottom: 40px;
         }
-        .box {
+
+        .search-box {
+            width: 40%;
+            min-width: 300px;
+            height: 45px;
+            border: 1px solid #dcdcdc;
+            border-radius: 24px;
+            padding: 0 20px;
+            font-size: 18px;
+            outline: none;
+        }
+
+        .search-wrapper {
+            position: relative;
             display: inline-block;
-            text-align: left;
-            background: white;
-            padding: 40px 50px;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
-        h1 {
-            font-weight: normal;
-            margin-bottom: 10px;
+
+        .search-button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
         }
-        p {
-            margin: 6px 0;
-            color: #777;
+
+        .search-button img {
+            width: 22px;
+            opacity: 0.6;
+        }
+
+        .search-button img:hover {
+            opacity: 1;
         }
     </style>
 </head>
 <body>
 
-    <!-- This will work once questionz.png is uploaded to the repo -->
-    <img src="questionz.png" alt="Site Logo">
+    <div class="container">
+        <!-- Your logo -->
+        <img src="questionz.png" alt="Questionz Logo">
 
-    <div class="box">
-        <h1>No internet</h1>
-        <p>Try:</p>
-        <p>• Checking the network cables, modem, and router</p>
-        <p>• Reconnecting to Wi‑Fi</p>
-        <br>
-        <p><strong>ERR_INTERNET_DISCONNECTED</strong></p>
+        <div class="search-wrapper">
+            <input class="search-box" type="text" placeholder="Search Questionz...">
+            <!-- Clicking this goes to the error page -->
+            <button class="search-button" onclick="window.location.href='no-internet.html'">
+                <img src="search-icon.png" alt="Search">
+            </button>
+        </div>
     </div>
 
 </body>
 </html>
+
 
